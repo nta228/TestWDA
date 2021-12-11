@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TestWDA001.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Form", "Home")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hinhthuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sotien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublictDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var st in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => st.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => st.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => st.Hinhthuc)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => st.Sotien)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => st.PublicDate)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = st.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = st.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = st.Id })
+    </td>
+</tr>
+    }
+
+</table>

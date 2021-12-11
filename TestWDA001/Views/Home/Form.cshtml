@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+<form action="List" method="post" class="" w3-container w3-card-4"">
+    <p>
+        <label>Mã Sinh Viên</label>
+        <input class="w3-input" type="text" style="width:90%" required>
+    </p>
+    <p>
+        <label>Họ và tên</label>
+        <input class="w3-input" type="text" style="width:90%" required>
+    </p>
+
+    <p>
+        <label>Gender:</label>
+        <input class="w3-radio" type="radio" name="gender" value="male" checked> Male
+        <input class="w3-radio" type="radio" name="gender" value="female"> Female
+        <input class="w3-radio" type="radio" name="gender" value="other"> Other
+    </p>
+
+    <p>
+        <label>Lỗi</label>
+        <textarea class="w3-input"></textarea>
+    </p>
+    <select class="w3-select" name="option">
+        <option value="" disabled selected>Hình thức phạt</option>
+        <option value="1">Nộp phạt</option>
+        <option value="2">Chống đẩy</option>
+    </select>
+    <label>Số tiền nộp phạt (hoặc số chống đẩy phải thực hiện)</label>
+<textarea class="w3-input"></textarea>
+
+    <p>
+        <button type="submit" name="Save" class="w3-button w3-section w3-teal w3-ripple"> Save </button>
+        <button type="button" class="w3-button w3-section w3-white w3-border w3-ripple"> Reset </button>
+    </p>
+
+
+</form>
